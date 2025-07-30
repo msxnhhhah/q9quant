@@ -154,7 +154,7 @@ for x in x_values:
             )
             stats = pf_period.stats()
             if stats['Total Trades'] >= config['min_trades']:
-                sharpe = stats['Sharpe Ratio']  * np.sqrt(252/365)
+                sharpe = stats['Sharpe Ratio']  * np.sqrt(365/252)
                 total_return = stats['Total Return [%]']
                 max_dd = stats['Max Drawdown [%]']
                 trade_count = stats['Total Trades']
